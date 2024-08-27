@@ -1,0 +1,14 @@
+#message {
+  line-height: 1.4;
+}
+#message-helper-text,
+#email-helper-text,
+#name-helper-text {
+  font-size: 1.6rem;
+}
+
+.main__page-loader {
+  height: calc(100vh - 77px - 387px - 40px);
+  display: grid;
+  place-items: center;
+}

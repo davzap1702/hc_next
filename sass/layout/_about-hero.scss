@@ -1,0 +1,33 @@
+.about-hero {
+  background-color: #f4f7f8;
+  border-radius: 20px;
+  padding-top: 10px;
+  background-image: url(assets/img/circles.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 50px;
+  &__content {
+    h1 {
+      font-size: 60px;
+      text-align: center;
+      color: var(--primary-color);
+      margin-bottom: 0px;
+    }
+    p {
+      margin-top: 5px;
+      text-align: center;
+    }
+    &--cta {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+    }
+  }
+  &__img {
+    display: flex;
+    justify-content: center;
+    img {
+      max-width: 1000px;
+    }
+  }
+}

@@ -1,95 +1,77 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+/* eslint-disable react/no-unescaped-entities */
+import Link from 'next/link';
+import Image from 'next/image';
 
-export default function Home() {
+import { HomeHero } from '@/components/layouts/hero/HomeHero';
+import { Services } from '@/components/layouts/services/Services';
+import { IMAGES } from '@/constants';
+import { MySwiper } from '@/components/MySwiper';
+import { FaCircleRight } from 'react-icons/fa6';
+
+export default async function Homepage() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <>
+      <HomeHero />
+      <Services />
+      <section className="section">
+        <div className="section__container container">
+          <div className="section__img">
+            <Image layout='responsive' width={500} height={300} src={IMAGES.support1} alt="Support image" />
+          </div>
+          <div className="section__text">
+            <h2>One-on-One Expert Support</h2>
+            <p>
+              Our One-on-One Expert Support offers personalized guidance and
+              tailored assistance to individuals seeking expert help. We provide
+              customized solutions, skill development, and practical
+              recommendations to help you overcome challenges and achieve your
+              goals. With flexible engagement options and a focus on
+              confidentiality, our service empowers you to succeed.
+            </p>
+          </div>
         </div>
-      </div>
+      </section>
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+      <hr className="container" />
 
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
+      <section className="section-2">
+        <div className="section-2__container container">
+          <div className="section-2__img">
+            <Image layout='responsive' priority width={500} height={300} src={IMAGES.support2} alt="Support image" />
+          </div>
+          <div className="section-2__text">
+            <h2>Cost Efficient Service</h2>
+            <p>
+              Our Cost-Efficient Service offers value optimization, customized
+              cost strategies, and streamlined processes to help you achieve
+              your goals while minimizing costs. We'll analyze your current
+              transportation processes and offer tailored assessments to
+              identify areas for cost savings without compromising quality.
+            </p>
+          </div>
+        </div>
+      </section>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
+      <section className="join-info">
+        <div className="join-info__container container">
+          <div className="join-info__text">
+            <h2>Want to know how we can help your business?</h2>
+          </div>
+          <div className="join-info__cta">
+            <Link href='/contact' className="primary-btn">
+              <span>Contact us online</span>
+              <FaCircleRight />
+            </Link>
+          </div>
+        </div>
+      </section>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+      <section className="testimonies">
+        <div className="testimonies__container container">
+          <h2>Testimonials</h2>
+          <MySwiper />
+        </div>
+      </section>
+    </>
   );
 }
