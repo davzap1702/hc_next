@@ -5,3 +5,11 @@ export const articleEndpoint = (slug: string) => {
 export const homepageEndpoint = () => {
   return 'http://localhost:1337/api/homepage?populate[article][populate][Hero_Image][populate]=*&populate[Components][populate][articles][populate][Hero_Image][populate]=*&populate[article][populate][author][populate]=*&populate[article][populate][categories][populate]=*';
 };
+
+export const articlesEndpoints = (limit?: number) => {
+  const BASE_API = 'http://localhost:1337/api/articles?sort=createdAt:desc&';
+
+  return limit 
+    ? `${BASE_API}pagination[pageSize]=${limit}`
+    : BASE_API;
+};
