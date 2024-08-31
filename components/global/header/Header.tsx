@@ -11,7 +11,7 @@ import Image from 'next/image';
 
 export const Header = () => {
   const nav = useRef<HTMLDivElement | null>(null);
-  const [scrollY, setScrollY] = useState(window.scrollY);
+  const [scrollY, setScrollY] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {

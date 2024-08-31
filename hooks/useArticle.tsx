@@ -28,7 +28,6 @@ const useArticle = async (slug: string): Promise<IArticleData> => {
       heroImage: data?.attributes?.Hero_Image?.data?.attributes?.url
     };
   } catch (error) {
-    console.log(error);
     throw new Error('Error fetching article data');  
   
   }

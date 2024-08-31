@@ -22,7 +22,6 @@ export const BlogCard = ({
   date,
   url,
 }: Props) => {
-  console.log('URL',url);
   return (
     <article className="blog_card">
       <img src={img} alt="" className="blog_card--img" />
