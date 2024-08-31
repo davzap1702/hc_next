@@ -21,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body style={{marginTop: '8.5rem'}} className={inter.className}>
         <Header />
         {children}
         <Footer />

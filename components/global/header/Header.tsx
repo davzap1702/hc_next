@@ -1,25 +1,43 @@
 /* eslint-disable @next/next/no-img-element */
 'use client';
-import { IMAGES } from '@/constants';
 import { HamburgerMenu } from '../HamburgerMenu';
 import { menuSeeder } from './menuSeeder';
 import { NavLink } from './NavLink';
+import BlackLogo from '../../../app/assets/img/HC_black-logo.svg';
 
 import Link from 'next/link';
-import React, { useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
+import Image from 'next/image';
 
 export const Header = () => {
-
   const nav = useRef<HTMLDivElement | null>(null);
+  const [scrollY, setScrollY] = useState(window.scrollY);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(parseInt(window.scrollY.toString()));
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [scrollY]);
+
   const mobileMenuHandler = () => {
     nav?.current?.classList.toggle('hide');
   };
 
   return (
-    <header className="container">
+    <header data-scroll={`${scrollY}`} className='container'>
       <div className="header__wrapper">
         <Link href={'/'} className="header__logo">
-          <img src={IMAGES.blackLogo} alt="Logo" />
+          <Image
+            layout='responsive'
+            priority
+            width={300}
+            height={63}
+            src={BlackLogo}
+            alt="Huecker Consulting Logo"
+          />
         </Link>
         <HamburgerMenu handler={mobileMenuHandler} />
       </div>

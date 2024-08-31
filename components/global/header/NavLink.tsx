@@ -13,6 +13,8 @@ const ACTIVE_LINK = 'active-link';
 export const NavLink = ({path, name}:Props) => {
   const pathname = usePathname();
 
+  console.log(process.env.NEXT_PUBLIC_MY_TEST);
+
   return (
     <Link className={`navbar-link ${pathname === path && ACTIVE_LINK}`} href={path}>{name}</Link>
   );
