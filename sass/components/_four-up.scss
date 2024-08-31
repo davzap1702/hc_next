@@ -3,6 +3,7 @@ h3.four-up--title {
 }
 
 .blog_four-up {
+  margin: 0 auto 8rem auto!important;
   @media (min-width: 800px) {
     &--main-article {
       &--img {
@@ -169,6 +170,12 @@ h3.four-up--title {
             font-size: 1.3rem;
             margin: 0.5rem 0;
             color: black;
+            line-clamp: 2;
+            text-overflow: ellipsis;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            -webkit-line-clamp: 2;
+            display: -webkit-box;
             @media (min-width: 600px) {
               font-size: 1.6rem;
             }

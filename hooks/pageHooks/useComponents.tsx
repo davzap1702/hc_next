@@ -1,7 +1,11 @@
 import { InlineImage } from '@/components/blog/InlineImage';
 import { Paragraph } from '@/components/blog/Paragraph';
 
-export const UseComponent = ({ components }: any) => {
+interface IComponentProps {
+  components: any
+}
+
+export const UseComponent = ({ components }: IComponentProps) => {
   return components?.map((component: any, index: number) => {
     switch (component.__component) {
     case 'shared.paragraph':

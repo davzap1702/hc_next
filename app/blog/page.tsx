@@ -1,35 +1,25 @@
 import { HomepageHero } from '@/components/blog/HomepageHero';
 import { LatestNews } from '@/components/blog/LatestNews';
+import { useHomepageHero } from '@/hooks/useHomepage';
+import { UseHomepageComponents } from '@/hooks/pageHooks/UseHomepageComponents';
+// import { UseComponent } from '@/hooks/useComponents';
 // import { ThreeUp } from '@/components/blog/ThreeUp';
 // import { FourUp } from '@/components/blog/FourUp';
-import { useHomepage } from '@/hooks/useHomepage';
-import { useLatest } from '@/hooks/useLatest';
 
 export default async function BlogHomepage() {
-
-  const data = await useHomepage();
-
-  useLatest();
-
-  
+  const {hero_props, raw} = await useHomepageHero();
 
   return (
     <main>
-      <HomepageHero 
-        heroHeading = {data.heroHeading}
-        heroImage = {data.heroImage}
-        heroAuthorName = {data.heroAuthorName}
-        heroAuthorImage = {data.heroAuthorImage}
-        heroArticleDisplayDate = {data.heroArticleDisplayDate}
-        heroEyebrow = {data.heroEyebrow}
-        heroArticleSlug = {data.heroArticleSlug}
-      />
+      <HomepageHero {...hero_props} />
       <section className="blog_homepage_section">
         {/* <ThreeUp title={'3up for testing'} data={data} /> */}
         {/* <FourUp title={'4up for testing'} /> */}
+        {/* <useHomepageHero /> */}
+        <UseHomepageComponents components={raw.attributes.Components} />
 
-        <LatestNews />
       </section>
+      <LatestNews />
     </main>
   );
 }

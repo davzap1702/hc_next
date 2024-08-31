@@ -3,6 +3,7 @@ import { Eyebrow } from './Eyebrow';
 import { FaCalendar } from 'react-icons/fa';
 import Link from 'next/link';
 import { formatDate } from '@/helpers';
+import Image from 'next/image';
 
 export interface ILatestArticleItem {
     image: string;
@@ -17,7 +18,7 @@ export const LatestNewsItem = ({image, eyebrow, title, author, date, path}: ILat
   return (
     <Link href={`/blog/articles/${path}`} className='blog_latest-news--article'>
       <div className="blog_latest-news--article--img">
-        <img src={image} alt="" />
+        <Image width={150} height={100} src={image} alt="" />
       </div>
       <div className="blog_latest-news--article--content">
         <Eyebrow name={eyebrow} />

@@ -702,6 +702,9 @@ h3.four-up--title {
   margin: 4.5rem auto 5rem auto;
 }
 
+.blog_four-up {
+  margin: 0 auto 8rem auto !important;
+}
 @media (min-width: 800px) {
   .blog_four-up--main-article--img {
     height: 35rem !important;
@@ -880,6 +883,12 @@ h3.four-up--title {
   font-size: 1.3rem;
   margin: 0.5rem 0;
   color: black;
+  line-clamp: 2;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
 }
 @media (min-width: 600px) {
   .blog_four-up--side-articles--article--content--title h3 {
@@ -984,6 +993,7 @@ h3.four-up--title {
 .blog_latest-news--article--img {
   max-width: 15rem;
   width: 100%;
+  flex: 0 1 40%;
 }
 .blog_latest-news--article--img img {
   width: 100%;
@@ -997,6 +1007,7 @@ h3.four-up--title {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  flex: 0 1 60%;
 }
 .blog_latest-news--article--content .blog_eyebrow--link {
   font-size: 1.1rem !important;

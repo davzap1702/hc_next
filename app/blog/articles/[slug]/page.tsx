@@ -3,7 +3,7 @@ import { AuthorByline } from '@/components/blog/AuthorByline';
 import { Eyebrow } from '@/components/blog/Eyebrow';
 import { formatDate } from '@/helpers';
 import useArticle from '@/hooks/useArticle';
-import { UseComponent } from '@/hooks/useComponents';
+import { UseComponent } from '@/hooks/pageHooks/useComponents';
 import { getArticles } from '@/lib/requests';
 import { Metadata } from 'next';
 
