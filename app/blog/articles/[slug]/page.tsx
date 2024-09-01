@@ -16,7 +16,8 @@ interface Props {
 }
 
 export async function generateStaticParams(){
-  const {data}: IArticleResponse = await fetch(articlesEndpoints()).then(res => res.json());
+  const {data}: IArticleResponse = await fetch(articlesEndpoints())
+    .then(res => res.json());
   console.log('=> Indexing Articles');
 
   return data.map(({attributes: {slug}}) => ({slug}));
