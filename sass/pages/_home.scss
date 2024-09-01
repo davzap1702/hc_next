@@ -118,6 +118,9 @@ p {
   }
   &__img {
     width: 35rem;
+    img{
+      border-radius: .8rem;
+    }
     @media (min-width: 768px) {
       width: auto;
       flex: 0 1 50%;
@@ -154,6 +157,9 @@ p {
   }
   &__img {
     width: 35rem;
+    img{
+      border-radius: .8rem;
+    }
     @media (min-width: 768px) {
       width: auto;
     }
@@ -181,7 +187,7 @@ p {
 
 .join-info {
   padding: 15rem 0;
-  background-image: url(https://ik.imagekit.io/roiotve1b/huecker/tr:q-50/text-bg.svg);
+  background-image: url(https://ik.imagekit.io/roiotve1b/huecker/stacked-waves-haikei.svg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -250,8 +256,8 @@ p {
 }
 
 .carousel1 {
-  background-image: url("https://ik.imagekit.io/roiotve1b/huecker/tr:q-50/truck-driving-asphalt-road-rural-landscape-sunsetcreated-with-generative-ai-technology.jpg");
-  background-position: center bottom;
+  background-image: url("https://ik.imagekit.io/roiotve1b/huecker/meeting-min.jpg");
+  background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
   height: 65rem;
@@ -261,10 +267,10 @@ p {
   }
 }
 .carousel2 {
-  background-image: url("https://ik.imagekit.io/roiotve1b/huecker/tr:q-50/truck.jpg");
+  background-image: url("https://ik.imagekit.io/roiotve1b/huecker/warehoue-worker-min.jpg");
   @extend .carousel1;
 }
 .carousel3 {
-  background-image: url("https://ik.imagekit.io/roiotve1b/huecker/tr:q-50/26468.jpg");
+  background-image: url("https://ik.imagekit.io/roiotve1b/huecker/training-min.jpg");
   @extend .carousel1;
 }

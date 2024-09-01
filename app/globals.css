@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@100..800&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 :root {
-  --primary-color: #1a4870;
+  --primary-color: #353535;
   --secondary-color: #000;
   --third-color: #000;
 }
@@ -570,7 +570,7 @@ a.navbar-link:hover:after {
 
 .blog_eyebrow {
   background-color: var(--primary-color);
-  padding: 0.5rem 1.3rem;
+  padding: 0.3rem 1rem;
   border-radius: 0.4rem;
   transition: 300ms;
   width: fit-content;
@@ -1023,7 +1023,7 @@ h3.four-up--title {
   -webkit-box-orient: vertical;
   text-overflow: ellipsis;
   display: -webkit-box;
-  height: 3.8rem;
+  height: 4.1rem;
   overflow: hidden;
 }
 @media (min-width: 600px) {
@@ -1164,7 +1164,7 @@ nav a {
   padding: 3rem 0 0 0;
 }
 .main-footer p {
-  color: white;
+  color: #d3d1d1;
 }
 .main-footer__container {
   display: grid;
@@ -1188,7 +1188,9 @@ nav a {
   width: 23rem;
 }
 .main-footer__section h4 {
-  color: white;
+  font-size: 2.3rem;
+  color: #d3d1d1;
+  margin: 1rem auto 2.5rem auto;
 }
 .main-footer__section--links {
   display: flex;
@@ -1198,7 +1200,7 @@ nav a {
 .main-footer__section--links a {
   text-decoration: none;
   color: rgb(200, 200, 200);
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   transition: 300ms;
 }
 .main-footer__section--links a:hover {
@@ -1213,7 +1215,7 @@ nav a {
 .main-footer__section--social a {
   text-decoration: none;
   color: rgb(200, 200, 200);
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   padding: 1rem;
   transition: 300ms;
 }
@@ -1229,13 +1231,19 @@ nav a {
   }
 }
 .main-footer__copyright {
-  text-align: center;
+  text-align: left;
   padding: 0.5rem;
   margin: 3rem auto 0 auto;
-  background-color: #000;
+  background-color: var(--primary-color);
+}
+.main-footer__copyright hr {
+  border-color: #8a8a8a;
+  border-width: 0 0 0.1px 0;
+  margin: 2rem auto;
 }
 .main-footer__copyright p {
-  font-size: 1.7rem;
+  color: #d3d1d1;
+  font-size: 1.3rem;
 }
 @media (max-width: 600px) {
   .main-footer__copyright p {
@@ -1395,6 +1403,9 @@ p {
 .section__img {
   width: 35rem;
 }
+.section__img img {
+  border-radius: 0.8rem;
+}
 @media (min-width: 768px) {
   .section__img {
     width: auto;
@@ -1436,6 +1447,9 @@ p {
 .section-2__img {
   width: 35rem;
 }
+.section-2__img img {
+  border-radius: 0.8rem;
+}
 @media (min-width: 768px) {
   .section-2__img {
     width: auto;
@@ -1463,7 +1477,7 @@ p {
 /* join */
 .join-info {
   padding: 15rem 0;
-  background-image: url(https://ik.imagekit.io/roiotve1b/huecker/tr:q-50/text-bg.svg);
+  background-image: url(https://ik.imagekit.io/roiotve1b/huecker/stacked-waves-haikei.svg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1536,8 +1550,8 @@ p {
 }
 
 .carousel1, .carousel3, .carousel2 {
-  background-image: url("https://ik.imagekit.io/roiotve1b/huecker/tr:q-50/truck-driving-asphalt-road-rural-landscape-sunsetcreated-with-generative-ai-technology.jpg");
-  background-position: center bottom;
+  background-image: url("https://ik.imagekit.io/roiotve1b/huecker/meeting-min.jpg");
+  background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
   height: 65rem;
@@ -1550,11 +1564,11 @@ p {
 }
 
 .carousel2 {
-  background-image: url("https://ik.imagekit.io/roiotve1b/huecker/tr:q-50/truck.jpg");
+  background-image: url("https://ik.imagekit.io/roiotve1b/huecker/warehoue-worker-min.jpg");
 }
 
 .carousel3 {
-  background-image: url("https://ik.imagekit.io/roiotve1b/huecker/tr:q-50/26468.jpg");
+  background-image: url("https://ik.imagekit.io/roiotve1b/huecker/training-min.jpg");
 }
 
 .features-section h3 {

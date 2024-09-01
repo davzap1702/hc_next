@@ -23,8 +23,8 @@ export const FooterSection = ({title, links, hasIcon}:IFooterSectionProps) => {
           links.map(({name, path, icon}) => (
             hasIcon ? (
               <div key={name}  className='main-footer__section--social'>
-                <Link href={path}>{icon}</Link>
-                <Link href={path}>{name}</Link>
+                <Link target='_blank' rel='noopener noreferrer' href={path}>{icon}</Link>
+                <Link target='_blank' rel='noopener noreferrer' href={path}>{name}</Link>
               </div>
             ):(
               <Link key={name} href={path}>{name}</Link>

@@ -1,6 +1,6 @@
 .main-footer {
   p {
-    color: white;
+    color: #d3d1d1;
   }
   background-color: var(--primary-color);
   padding: 3rem 0 0 0;
@@ -23,7 +23,9 @@
       width: 23rem;
     }
     h4 {
-      color: white;
+      font-size: 2.3rem;
+      color: #d3d1d1;
+      margin: 1rem auto 2.5rem auto;
     }
     &--links {
       display: flex;
@@ -32,7 +34,7 @@
       a {
         text-decoration: none;
         color: rgb(200, 200, 200);
-        font-size: 1.8rem;
+        font-size: 1.5rem;
         transition: 300ms;
         &:hover {
           color: #ffffff;
@@ -43,7 +45,7 @@
       a {
         text-decoration: none;
         color: rgb(200, 200, 200);
-        font-size: 1.8rem;
+        font-size: 1.5rem;
         padding: 1rem;
         transition: 300ms;
         &:first-of-type {
@@ -63,12 +65,18 @@
     }
   }
   &__copyright {
-    text-align: center;
+    hr{
+      border-color: #8a8a8a;
+      border-width: 0 0 .1px 0;
+      margin: 2rem auto;
+    }
+    text-align: left;
     padding: 0.5rem;
     margin: 3rem auto 0 auto;
-    background-color: #000;
+    background-color: var(--primary-color);
     p {
-      font-size: 1.7rem;
+      color: #d3d1d1;
+      font-size: 1.3rem;
       @media (max-width: 600px) {
         font-size: 1.5rem;
       }

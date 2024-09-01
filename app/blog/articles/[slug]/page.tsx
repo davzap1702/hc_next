@@ -6,11 +6,20 @@ import useArticle from '@/hooks/useArticle';
 import { UseComponent } from '@/hooks/pageHooks/useComponents';
 import { getArticles } from '@/lib/requests';
 import { Metadata } from 'next';
+import { articlesEndpoints } from '@/lib/routes';
+import { IArticleResponse } from '@/interfaces/latest';
 
 interface Props {
     params: {
         slug: string
     }
+}
+
+export async function generateStaticParams(){
+  const {data}: IArticleResponse = await fetch(articlesEndpoints()).then(res => res.json());
+  console.log('=> Indexing Articles');
+
+  return data.map(({attributes: {slug}}) => ({slug}));
 }
 
 export async function generateMetadata({params: {slug}}: Props): Promise<Metadata>{

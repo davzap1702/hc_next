@@ -19,8 +19,9 @@ export const Footer = () => {
           ))
         }
       </div>
-      <div className="main-footer__copyright">
-        <p>Copyright ©️ 2023 - 2024 Huecker Consulting LLC. All rights reserved.</p>
+      <div className="main-footer__copyright container">
+        <hr />
+        <p>©️ 2024 Huecker Consulting LLC. All rights reserved.</p>
       </div>
     </footer>
   );

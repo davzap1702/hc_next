@@ -16,7 +16,7 @@ export default async function Homepage() {
       <section className="section">
         <div className="section__container container">
           <div className="section__img">
-            <Image layout='responsive' width={500} height={300} src={IMAGES.support1} alt="Support image" />
+            <Image layout='responsive' width={450} height={220} src={IMAGES.support1} alt="Support image" />
           </div>
           <div className="section__text">
             <h2>One-on-One Expert Support</h2>

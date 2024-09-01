@@ -6,18 +6,18 @@ export const footerSeeder: Array<IFooterSectionProps> = [
     title: 'Company',
     links: [
       { name: 'Home', path: '/' },
-      { name: 'About Us', path: '/About' },
-      { name: 'Contact', path: '/Contact' },
+      { name: 'About Us', path: '/about-us' },
+      { name: 'Contact', path: '/contact' },
       { name: 'Blog', path: '/blog' }
     ]
   },
   {
     title: 'Services',
     links: [
-      { name: 'Vendor Selection', path: '/Services/vendor-selection' },
-      { name: 'Software Implementation', path: '/Services/software-implementation' },
-      { name: 'Experiential Training', path: '/Services/experiential' },
-      { name: 'Custom Development', path: '/Services/custom-development' }
+      { name: 'Vendor Selection', path: '/services#vendor-selection' },
+      { name: 'Software Implementation', path: '/services#software-implementation' },
+      { name: 'Experiential Training', path: '/services#experiential' },
+      { name: 'Custom Development', path: '/services#custom-development' }
     ]
   },
   {

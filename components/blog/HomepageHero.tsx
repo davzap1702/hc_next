@@ -19,6 +19,7 @@ export const HomepageHero = ({
   return (
     <div className="blog_homepage_hero container">
       <Image
+        priority
         width={1440}
         height={500}
         src={image}
