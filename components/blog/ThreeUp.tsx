@@ -1,25 +1,18 @@
 import React from 'react';
-import { BlogCard } from './BlogCard';
+import { BlogCard, IThreeUpChild } from './BlogCard';
 
-export const ThreeUp = ({title, data}: any) => {
+export interface IThreeUpProps {
+  title: string;
+  children: IThreeUpChild[];
+}
+
+export const ThreeUp = ({title, children }: IThreeUpProps) => {
+  if (children.length < 3) return null;
   return (
     <section className="blog_three-up container">
       <h3>{title}</h3>
       <div className="blog_three-up--wrapper">
-        {data.map((item: any, index: number) => {
-          return (
-            <BlogCard
-              key={index}
-              img={item.img}
-              title={item.title}
-              authorImg={item.authorImg}
-              authorName={item.authorName}
-              date={item.date}
-              url={item.url}
-              eyebrow={item.eyebrow}
-            />
-          );
-        })}
+        {children.map((child, _i) => (<BlogCard key={_i} {...child} />))}
       </div>
     </section>
   );

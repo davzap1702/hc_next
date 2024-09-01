@@ -8,6 +8,8 @@ import { getArticles } from '@/lib/requests';
 import { Metadata } from 'next';
 import { articlesEndpoints } from '@/lib/routes';
 import { IArticleResponse } from '@/interfaces/latest';
+import { useRelatedArticles } from '@/hooks/useRelatedArticles';
+import { ThreeUp } from '@/components/blog/ThreeUp';
 
 interface Props {
     params: {
@@ -39,6 +41,7 @@ export async function generateMetadata({params: {slug}}: Props): Promise<Metadat
 export default async function Page({params: {slug}}: Props) {
 
   const data = await useArticle(slug);
+  const relatedArticleProps = await useRelatedArticles(data?.eyebrow);
 
   return (
     <main className="container-md blog_article">
@@ -60,6 +63,8 @@ export default async function Page({params: {slug}}: Props) {
       <section className="blog_body">
         <UseComponent components={data?.components} />
       </section>
+    
+      <ThreeUp {...relatedArticleProps} />
     </main>
   );
 }

@@ -15,3 +15,7 @@ export const articlesEndpoints = (limit?: number) => {
     ? `${BASE_API}pagination[pageSize]=${limit}`
     : BASE_API;
 };
+
+export const articlesByCategory = (category: string) => {
+  return `${env.base_url}/articles?sort=createdAt:desc&filters[categories][name][$eq]=${encodeURIComponent(category)}&populate=*`;
+};

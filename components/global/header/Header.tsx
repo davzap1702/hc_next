@@ -8,10 +8,13 @@ import BlackLogo from '../../../app/assets/img/HC_black-logo.svg';
 import Link from 'next/link';
 import React, { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 
 export const Header = () => {
   const nav = useRef<HTMLDivElement | null>(null);
   const [scrollY, setScrollY] = useState(0);
+
+  const location = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,6 +24,10 @@ export const Header = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, [scrollY]);
+
+  useEffect(() => {
+    nav?.current?.classList.add('hide');
+  }, [location]);
 
   const mobileMenuHandler = () => {
     nav?.current?.classList.toggle('hide');

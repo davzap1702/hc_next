@@ -1,16 +1,17 @@
 /* eslint-disable @next/next/no-img-element */
+import { formatDate } from '@/helpers';
 import Link from 'next/link';
 import React from 'react';
 //TODO! Implemenet Next Image
 
-interface Props {
+export interface IThreeUpChild {
     img: string;
     eyebrow: string;
     title: string;
     authorImg: string;
     authorName: string;
-    date: string;
-    url: string;
+    date: Date;
+    path: string;
 }
 
 export const BlogCard = ({
@@ -20,15 +21,15 @@ export const BlogCard = ({
   authorImg,
   authorName,
   date,
-  url,
-}: Props) => {
+  path,
+}: IThreeUpChild) => {
   return (
     <article className="blog_card">
       <img src={img} alt="" className="blog_card--img" />
       <div className="blog_card--eyebrow">
         <p>{eyebrow}</p>
       </div>
-      <Link href={url}>
+      <Link href={`/blog/articles/${path}`}>
         <div className="blog_card--title">
           <h5>{title}</h5>
         </div>
@@ -41,11 +42,11 @@ export const BlogCard = ({
           />
           <div className="blog_card__author-byline--author">
             <p>
-                By <strong>{authorName}</strong>
+                By <strong>{authorName}</strong> -
             </p>
           </div>
           <div className="blog_card__author-byline--date">
-            <p>{date}</p>
+            <p>{formatDate(new Date(date))}</p>
           </div>
         </div>
       </Link>
