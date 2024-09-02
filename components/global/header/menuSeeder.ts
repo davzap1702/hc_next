@@ -17,7 +17,7 @@ export const menuSeeder: Array<Props> = [
     name: 'About Us'
   },
   {
-    path: '/blog',
-    name: 'Blog'
+    path: '/contact',
+    name: 'Contact'
   }
 ];

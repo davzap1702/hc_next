@@ -53,8 +53,8 @@ export const Header = () => {
           {menuSeeder.map(item => (
             <NavLink key={item.name} {...item} />
           ))}
-          <Link className="primary-btn" href="/contact">
-                Contact Us
+          <Link className="primary-btn" href="/blog">
+                Blog
           </Link>
         </nav>
       </div>

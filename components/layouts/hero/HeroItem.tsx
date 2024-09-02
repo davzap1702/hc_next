@@ -1,6 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import Link from 'next/link';
 import React from 'react';
+import { FaAngleRight } from 'react-icons/fa';
 
 interface Props {
   style: string,
@@ -22,12 +23,13 @@ export const HeroItem = ({style}:Props) => {
         </div>
         <div className="hero__cta">
           <Link
+            style={{display: 'flex', width: 'fit-content', alignItems: 'center'}}
             aria-label="Learn more about our services"
-            href={'/Services'}
+            href={'/services'}
             className="primary-btn hero_btn"
           >
             <span> Learn more </span>
-            <i className="fa-solid fa-angle-right"></i>
+            <FaAngleRight />
           </Link>
         </div>
       </section>
