@@ -3,7 +3,7 @@ h3.four-up--title {
 }
 
 .blog_four-up {
-  margin: 0 auto 8rem auto!important;
+  margin: 0 auto 8rem auto !important;
   @media (min-width: 800px) {
     &--main-article {
       &--img {
@@ -79,10 +79,10 @@ h3.four-up--title {
       div.readmore {
         color: var(--primary-color);
         font-weight: 700;
-        span{
+        span {
           padding-left: 1rem;
           svg {
-            padding-top: .2rem;
+            padding-top: 0.2rem;
             transition: 300ms;
           }
         }
@@ -221,12 +221,12 @@ h3.four-up--title {
               font-size: 1.4rem;
             }
             span {
+              transition: 300ms;
+              padding-left: 1rem;
+              svg {
                 transition: 300ms;
-                padding-left: 1rem;
-                svg {
-                transition: 300ms;
-                padding-top: .1rem;
-                }
+                padding-top: 0.1rem;
+              }
             }
           }
         }

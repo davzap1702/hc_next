@@ -10,7 +10,7 @@ interface Props {
 
 const ACTIVE_LINK = 'active-link';
 
-export const NavLink = ({path, name}:Props) => {
+export const NavLink = ({ path, name }:Props) => {
   const pathname = usePathname();
 
   return (

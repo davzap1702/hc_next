@@ -14,7 +14,7 @@ export interface ILatestArticleItem {
     path: string
 }
 
-export const LatestNewsItem = ({image, eyebrow, title, author, date, path}: ILatestArticleItem) => {
+export const LatestNewsItem = ({ image, eyebrow, title, author, date, path }: ILatestArticleItem) => {
   return (
     <Link href={`/blog/articles/${path}`} className='blog_latest-news--article'>
       <div className="blog_latest-news--article--img">

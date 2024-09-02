@@ -15,5 +15,5 @@ export const useLatest = async (): Promise<Array<ILatestArticleItem>> => {
       path: article.attributes.slug
     };
   });
-  
+
 };

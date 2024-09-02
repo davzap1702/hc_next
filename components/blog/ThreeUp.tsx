@@ -6,8 +6,9 @@ export interface IThreeUpProps {
   children: IThreeUpChild[];
 }
 
-export const ThreeUp = ({title, children }: IThreeUpProps) => {
+export const ThreeUp = ({ title, children }: IThreeUpProps) => {
   if (children.length < 3) return null;
+
   return (
     <section className="blog_three-up container">
       <h3>{title}</h3>

@@ -24,5 +24,5 @@ export const useFourUp = (component: INewsComponent): IFourUpComponent => {
     }),
 
   };
-   
+
 };

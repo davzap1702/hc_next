@@ -11,7 +11,7 @@ export const homepageEndpoint = () => {
 export const articlesEndpoints = (limit?: number) => {
   const BASE_API = `${env.base_url}/articles?sort=createdAt:desc&`;
 
-  return limit 
+  return limit
     ? `${BASE_API}pagination[pageSize]=${limit}`
     : BASE_API;
 };

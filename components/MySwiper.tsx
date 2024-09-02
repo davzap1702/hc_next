@@ -1,11 +1,11 @@
 'use client';
 import React from 'react';
-import {Swiper, SwiperSlide} from 'swiper/react';
-import LeftArrow from './LeftArrow';
-import RightArrow from './RightArrow';
 import { testimonies } from './testimonials/seeder';
+import { Swiper, SwiperSlide } from 'swiper/react';
 import { Testimonial } from './testimonials/Testimonial';
 import { Navigation } from 'swiper/modules';
+import LeftArrow from './LeftArrow';
+import RightArrow from './RightArrow';
 import 'swiper/css';
 
 export const MySwiper = () => {
@@ -46,6 +46,6 @@ export const MySwiper = () => {
           />
         </SwiperSlide>
       ))}
-    </Swiper> 
+    </Swiper>
   );
 };

@@ -24,13 +24,13 @@ export const footerSeeder: Array<IFooterSectionProps> = [
     title: 'Connect',
     hasIcon: true,
     links: [
-      { 
-        name: 'LinkedIn', 
+      {
+        name: 'LinkedIn',
         path: 'https://www.linkedin.com/company/huecker-consulting/',
-        icon: <FaLinkedin /> 
+        icon: <FaLinkedin />
       },
-      { 
-        name: 'Facebook', 
+      {
+        name: 'Facebook',
         path: 'https://www.facebook.com/profile.php?id=61553056147885&mibextid=LQQJ4d',
         icon: <FaFacebook />
       }

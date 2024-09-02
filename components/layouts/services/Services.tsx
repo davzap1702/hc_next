@@ -14,5 +14,5 @@ export const Services = () => {
         }
       </div>
     </section>
-  );  
+  );
 };

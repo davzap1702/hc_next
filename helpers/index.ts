@@ -6,7 +6,7 @@ export function formatDate(date: Date) {
   if (!(date instanceof Date)) {
     throw new TypeError('The argument must be a Date object.');
   }
-  
+
   const months = [
     'January',
     'February',
@@ -21,11 +21,11 @@ export function formatDate(date: Date) {
     'November',
     'December',
   ];
-  
+
   const day = date.getDate();
   const month = months[date.getMonth()];
   const year = date.getFullYear();
-  
+
   return `${month} ${day}, ${year}`;
 }
 

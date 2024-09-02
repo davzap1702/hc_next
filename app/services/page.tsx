@@ -18,10 +18,10 @@ export default function Services() {
         <div className="services-container container">
           <div className="services__section">
             <div className="services__section--img">
-              <Image 
+              <Image
                 layout='responsive'
-                priority 
-                width={500} 
+                priority
+                width={500}
                 height={410}
                 src={IMAGES.vendor}
                 role="presentation"

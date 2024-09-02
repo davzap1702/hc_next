@@ -18,4 +18,3 @@ export const IMAGES = {
   barry: 'https://ik.imagekit.io/roiotve1b/huecker/tr:q-50/Barry.jpeg?',
   eric: 'https://ik.imagekit.io/roiotve1b/huecker/tr:q-50/Eric.jpeg?',
 };
-  

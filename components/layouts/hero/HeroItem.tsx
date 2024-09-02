@@ -7,7 +7,7 @@ interface Props {
   style: string,
 }
 
-export const HeroItem = ({style}:Props) => {
+export const HeroItem = ({ style }:Props) => {
   return (
     <div className={style}>
       <section className="container hero">
@@ -23,7 +23,7 @@ export const HeroItem = ({style}:Props) => {
         </div>
         <div className="hero__cta">
           <Link
-            style={{display: 'flex', width: 'fit-content', alignItems: 'center'}}
+            style={{ display: 'flex', width: 'fit-content', alignItems: 'center' }}
             aria-label="Learn more about our services"
             href={'/services'}
             className="primary-btn hero_btn"

@@ -18,14 +18,14 @@ interface Props {
 }
 
 export async function generateStaticParams(){
-  const {data}: IArticleResponse = await fetch(articlesEndpoints())
+  const { data }: IArticleResponse = await fetch(articlesEndpoints())
     .then(res => res.json());
   console.log('=> Indexing Articles');
 
-  return data.map(({attributes: {slug}}) => ({slug}));
+  return data.map(({ attributes: { slug } }) => ({ slug }));
 }
 
-export async function generateMetadata({params: {slug}}: Props): Promise<Metadata>{
+export async function generateMetadata({ params: { slug } }: Props): Promise<Metadata>{
   const { data } = await getArticles(slug);
 
   return {
@@ -38,14 +38,14 @@ export async function generateMetadata({params: {slug}}: Props): Promise<Metadat
 }
 
 
-export default async function Page({params: {slug}}: Props) {
+export default async function Page({ params: { slug } }: Props) {
 
   const data = await useArticle(slug);
   const relatedArticleProps = await useRelatedArticles(data?.eyebrow);
 
   return (
     <main className="container-md blog_article">
-      <Eyebrow name={data?.eyebrow ?? 'Archives'} /> 
+      <Eyebrow name={data?.eyebrow ?? 'Archives'} />
       <h1>{data?.heading}</h1>
       <AuthorByline
         imagen={data?.authorImage}
@@ -63,7 +63,7 @@ export default async function Page({params: {slug}}: Props) {
       <section className="blog_body">
         <UseComponent components={data?.components} />
       </section>
-    
+
       <ThreeUp {...relatedArticleProps} />
     </main>
   );

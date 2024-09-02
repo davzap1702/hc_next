@@ -2,14 +2,14 @@
 import React from 'react';
 import Avatar from '../../app/assets/img/avatar-15.png';
 
-interface Props { 
-    imagen: string; 
-    name: string; 
-    title: string; 
+interface Props {
+    imagen: string;
+    name: string;
+    title: string;
     date: string;
 }
 
-export const AuthorByline = ({imagen, name, title, date}:Props) => {
+export const AuthorByline = ({ imagen, name, title, date }:Props) => {
   return (
     <div className="author-byline">
       <div className="author-byline__avatar">

@@ -15,7 +15,7 @@ interface IArticleData {
 const useArticle = async (slug: string): Promise<IArticleData> => {
   try {
     const { data } = await getArticles(slug);
-    
+
 
     return {
       heading: data?.attributes?.heading,
@@ -28,8 +28,8 @@ const useArticle = async (slug: string): Promise<IArticleData> => {
       heroImage: data?.attributes?.Hero_Image?.data?.attributes?.url
     };
   } catch (error) {
-    throw new Error('Error fetching article data');  
-  
+    throw new Error('Error fetching article data');
+
   }
 };
 

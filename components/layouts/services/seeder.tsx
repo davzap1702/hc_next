@@ -1,5 +1,5 @@
 import { FaCloudArrowUp, FaPeopleGroup } from 'react-icons/fa6';
-import type {IServiceProps} from './ServiceItem';
+import type { IServiceProps } from './ServiceItem';
 import { FaCode, FaGraduationCap } from 'react-icons/fa';
 
 const size = 35;

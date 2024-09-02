@@ -10,7 +10,7 @@ export interface IServiceProps {
 }
 
 
-export const ServiceItem = ({title, description, link, href, icon}:IServiceProps) => {
+export const ServiceItem = ({ title, description, link, href, icon }:IServiceProps) => {
   return (
     <div className="grid-3-info__section">
       {icon}
@@ -18,7 +18,7 @@ export const ServiceItem = ({title, description, link, href, icon}:IServiceProps
       <p style={{ marginBottom: '4rem' }}>{description}</p>
       <Link
         aria-label="Learn more about our Vendor Selection"
-        href={{href}}
+        href={{ href }}
         className="primary-btn"
       >{link}</Link>
     </div>

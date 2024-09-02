@@ -14,13 +14,13 @@ export interface IFooterSectionProps {
     hasIcon?: boolean;
 }
 
-export const FooterSection = ({title, links, hasIcon}:IFooterSectionProps) => {
+export const FooterSection = ({ title, links, hasIcon }:IFooterSectionProps) => {
   return (
     <div className="main-footer__section">
       <h4>{title}</h4>
       <div className={'main-footer__section--links'}>
         {
-          links.map(({name, path, icon}) => (
+          links.map(({ name, path, icon }) => (
             hasIcon ? (
               <div key={name}  className='main-footer__section--social'>
                 <Link target='_blank' rel='noopener noreferrer' href={path}>{icon}</Link>

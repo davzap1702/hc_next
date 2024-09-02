@@ -4,6 +4,7 @@ import { useSwiper } from 'swiper/react';
 
 const LeftArrow = () => {
   const swiper = useSwiper();
+
   return (
     <button
       title="Previous"

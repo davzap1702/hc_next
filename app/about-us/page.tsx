@@ -5,13 +5,13 @@ export default function About() {
   return (
     <section className="about-me container">
       <div className="about-me__container">
-        <Image 
-          priority 
-          width={690} 
-          height={800} 
-          layout='responsive' 
-          src={IMAGES.zach2} 
-          role="presentation" 
+        <Image
+          priority
+          width={690}
+          height={800}
+          layout='responsive'
+          src={IMAGES.zach2}
+          role="presentation"
           alt=''
         />
         <div className="about-me__container--content container">

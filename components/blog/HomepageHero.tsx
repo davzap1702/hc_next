@@ -4,16 +4,16 @@ import React from 'react';
 import { Eyebrow } from './Eyebrow';
 import Image from 'next/image';
 import { formatDate } from '@/helpers';
-import type {IHome} from '../../hooks/useHomepage';
+import type { IHome } from '../../hooks/useHomepage';
 
 
 export const HomepageHero = ({
-  heading, 
-  image, 
-  authorName, 
-  authorImage, 
-  articleDisplayDate, 
-  eyebrow, 
+  heading,
+  image,
+  authorName,
+  authorImage,
+  articleDisplayDate,
+  eyebrow,
   articleSlug
 }: IHome) => {
   return (

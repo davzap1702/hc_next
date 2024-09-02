@@ -18,7 +18,7 @@ export interface IHome {
 
 export const useHomepageHero = async (): Promise<Props> => {
   try {
-    const {data} = await getHomepage();
+    const { data } = await getHomepage();
     return {
       raw: data,
       hero_props: {

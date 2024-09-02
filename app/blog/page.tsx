@@ -7,7 +7,7 @@ import { UseHomepageComponents } from '@/hooks/pageHooks/UseHomepageComponents';
 // import { FourUp } from '@/components/blog/FourUp';
 
 export default async function BlogHomepage() {
-  const {hero_props, raw} = await useHomepageHero();
+  const { hero_props, raw } = await useHomepageHero();
 
   return (
     <main>

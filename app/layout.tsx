@@ -22,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <link rel="preconnect" href="https://fonts.gstatic.com" />
-      <body style={{marginTop: '8.5rem'}} className={inter.className}>
+      <body style={{ marginTop: '8.5rem' }} className={inter.className}>
         <Header />
         {children}
         <Footer />

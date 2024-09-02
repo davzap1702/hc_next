@@ -4,7 +4,7 @@ interface Props {
     name: string;
 }
 
-export const Eyebrow = ({name}:Props) => {
+export const Eyebrow = ({ name }:Props) => {
   return (
     <div className="blog_eyebrow">
       <p className="blog_eyebrow--link">
