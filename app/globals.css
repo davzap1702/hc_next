@@ -360,12 +360,12 @@ a.navbar-link:hover:after {
   align-items: center;
   justify-content: space-between;
 }
-.testimonial-card__header i {
+.testimonial-card__header svg {
   font-size: 3.4rem;
-  color: rgba(1, 116, 190, 0.5647058824);
+  color: var(--primary-color);
 }
 @media (max-width: 768px) {
-  .testimonial-card__header i {
+  .testimonial-card__header svg {
     display: none;
   }
 }
@@ -420,10 +420,10 @@ a.navbar-link:hover:after {
 .carousel-btn:hover {
   transform: scale(1.09);
 }
-.carousel-btn i {
+.carousel-btn svg {
   height: 4.4rem;
   font-size: 3rem;
-  color: rgba(1, 116, 190, 0.5647058824);
+  color: var(--primary-color);
 }
 
 .carousel-cta {
@@ -1031,7 +1031,6 @@ h3.four-up--title {
   -webkit-box-orient: vertical;
   text-overflow: ellipsis;
   display: -webkit-box;
-  height: 4.1rem;
   overflow: hidden;
 }
 @media (min-width: 600px) {
@@ -1116,6 +1115,10 @@ nav a {
   padding: 0.6rem 0rem;
 }
 
+nav a:nth-child(4) {
+  margin-bottom: 1rem;
+}
+
 .header__wrapper {
   margin: 0;
   display: flex;
@@ -1159,6 +1162,7 @@ nav a {
   .header_nav nav {
     flex-direction: row;
     background-color: transparent;
+    box-shadow: none;
   }
   nav {
     display: flex;
@@ -1166,6 +1170,9 @@ nav a {
     justify-content: center;
     align-items: center;
     animation: load-up 800ms;
+  }
+  nav a:nth-child(4) {
+    margin-bottom: 0;
   }
   .header__logo svg {
     width: 25rem;

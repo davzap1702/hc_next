@@ -23,9 +23,9 @@
     gap: 20px;
     align-items: center;
     justify-content: space-between;
-    i {
+    svg {
       font-size: 3.4rem;
-      color: #0174be90;
+      color: var(--primary-color);
       @media (max-width: 768px) {
         display: none;
       }
@@ -80,10 +80,10 @@
   &:hover {
     transform: scale(1.09);
   }
-  i {
+  svg {
     height: 4.4rem;
     font-size: 3rem;
-    color: #0174be90;
+    color: var(--primary-color);
   }
 }
 
