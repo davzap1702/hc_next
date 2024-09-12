@@ -1,0 +1,91 @@
+@mixin rounded($radius: 5px) {
+  border-radius: $radius;
+}
+
+@mixin media($breakpoint) {
+  @if $breakpoint == phone {
+    @media (max-width: 600px) {
+      @content;
+    }
+  } @else if $breakpoint == tablet {
+    @media (max-width: 900px) {
+      @content;
+    }
+  } @else if $breakpoint == desktop {
+    @media (min-width: 901px) {
+      @content;
+    }
+  }
+}
+
+@mixin avatar($width: 100px, $height: 100px) {
+  width: $width;
+  height: $height;
+  object-fit: cover;
+  clip-path: circle(50%);
+}
+
+@mixin shadow($style: 0) {
+  @if $style == 0 {
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  } @else if $style == 1 {
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  } @else if $style == 2 {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+}
+
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == phone {
+    @media (max-width: 600px) {
+      @content;
+    }
+  } @else if $breakpoint == tablet {
+    @media (max-width: 900px) {
+      @content;
+    }
+  } @else if $breakpoint == desktop {
+    @media (min-width: 901px) {
+      @content;
+    }
+  }
+}
+
+@mixin spacerTop($size: "small") {
+  @if $size == "small" {
+    margin-top: 4.4rem;
+    @include respond-to(desktop) {
+      margin-top: 9rem;
+    }
+  } @else if $size == "medium" {
+    margin-top: 7rem;
+    @include respond-to(desktop) {
+      margin-top: 12rem;
+    }
+  } @else if $size == "large" {
+    margin-top: 10rem;
+    @include respond-to(desktop) {
+      margin-top: 15rem;
+    }
+  }
+}
+
+@mixin items-center() {
+  display: flex;
+  align-items: center;
+}
+
+@mixin ellipsis($line: 1) {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  line-clamp: $line;
+  -webkit-line-clamp: $line;
+  -webkit-box-orient: vertical;
+}
+
+@mixin container($w, $h) {
+  width: $w;
+  height: $h;
+}

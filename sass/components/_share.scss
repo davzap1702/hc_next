@@ -1,0 +1,28 @@
+@import "../mixins/mixins";
+
+.share-component {
+  @include items-center;
+  @include shadow(1);
+  @include rounded(7px);
+  gap: 5px;
+  padding: 6px;
+  @include respond-to("phone") {
+    padding: 3px;
+    gap: 2px;
+    @include shadow(0);
+  }
+  &--item {
+    padding: 1rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    @include respond-to("phone") {
+      padding: 0.8rem;
+    }
+    transition: 0.3s;
+    @include rounded(4px);
+    &:hover {
+      background-color: #f0efefcd;
+    }
+  }
+}

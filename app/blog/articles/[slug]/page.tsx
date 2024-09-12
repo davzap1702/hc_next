@@ -10,6 +10,7 @@ import { articlesEndpoints } from '@/lib/routes';
 import { IArticleResponse } from '@/interfaces/latest';
 import { useRelatedArticles } from '@/hooks/useRelatedArticles';
 import { ThreeUp } from '@/components/blog/ThreeUp';
+import { Share } from '@/components';
 
 interface Props {
     params: {
@@ -47,12 +48,15 @@ export default async function Page({ params: { slug } }: Props) {
     <main className="container-md blog_article">
       <Eyebrow name={data?.eyebrow ?? 'Archives'} />
       <h1>{data?.heading}</h1>
-      <AuthorByline
-        imagen={data?.authorImage}
-        name={data?.authorName}
-        title={data?.authorTitle ?? 'Writer'}
-        date={formatDate(new Date(data?.articleDisplayDate))}
-      />
+      <div className='blog_article__top-hero'>
+        <AuthorByline
+          imagen={data?.authorImage}
+          name={data?.authorName}
+          title={data?.authorTitle ?? 'Writer'}
+          date={formatDate(new Date(data?.articleDisplayDate))}
+        />
+        <Share heading={data.heading} />
+      </div>
       <img
         className="blog_article__hero"
         src={data?.heroImage}

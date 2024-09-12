@@ -2,6 +2,8 @@
 @use "base/reset";
 @use "base/utilities";
 @use "base/custom";
+//mixins
+@use "./mixins/mixins";
 //component
 @use "components/buttons";
 @use "components/accordion";
@@ -14,6 +16,7 @@
 @use "components/three_up";
 @use "components/four-up";
 @use "components/latest-news";
+@use "components/share";
 //layout
 @use "layout/header";
 @use "layout/footer";
