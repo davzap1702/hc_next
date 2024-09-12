@@ -1,6 +1,6 @@
 'use client';
 import Link from 'next/link';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { FaLink, FaLinkedin, FaSquareFacebook, FaSquareXTwitter } from 'react-icons/fa6';
 import Swal from 'sweetalert2';
 
@@ -9,7 +9,7 @@ interface Props {
 }
 
 export const Share = ({ heading }: Props) => {
-  const location = window.location.href;
+  const [location, setLocation] = useState('');
   const shareOn = {
     facebook: `https://www.facebook.com/sharer/sharer.php?u=${location}`,
     linkedin: `https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(location)}&title=${encodeURIComponent(heading)}`,
@@ -42,6 +42,10 @@ export const Share = ({ heading }: Props) => {
       });
     }
   };
+
+  useEffect(() => {
+    setLocation(window.location.href);
+  }, []);
 
   return (
     <>
