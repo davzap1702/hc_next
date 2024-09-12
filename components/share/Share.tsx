@@ -47,13 +47,13 @@ export const Share = ({ heading }: Props) => {
     <>
       <article className='share-component'>
         <Link className='share-component--item' target='_blank' href={shareOn.twitter}>
-          <FaSquareXTwitter color='#000' />
+          <FaSquareXTwitter color='#202124' />
         </Link>
         <Link className='share-component--item' target='_blank' href={shareOn.facebook}>
-          <FaSquareFacebook color='#000' />
+          <FaSquareFacebook color='#202124' />
         </Link>
         <Link target='_blank' className='share-component--item' href={shareOn.linkedin}>
-          <FaLinkedin color='#000' />
+          <FaLinkedin color='#202124' />
         </Link>
         <button onClick={() => {
           copyToClipboard();
