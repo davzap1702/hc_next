@@ -9,7 +9,7 @@ export default function About() {
           priority
           width={690}
           height={800}
-          layout='responsive'
+          style={{ height: 'auto', width: '100%' }}
           src={IMAGES.zach2}
           role="presentation"
           alt=''

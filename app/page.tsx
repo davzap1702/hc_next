@@ -16,7 +16,7 @@ export default async function Homepage() {
       <section className="section">
         <div className="section__container container">
           <div className="section__img">
-            <Image layout='responsive' width={450} height={220} src={IMAGES.support1} alt="Support image" />
+            <Image style={{ height: 'auto', width: '100%' }} width={450} height={220} src={IMAGES.support1} alt="Support image" />
           </div>
           <div className="section__text">
             <h2>One-on-One Expert Support</h2>
@@ -37,7 +37,7 @@ export default async function Homepage() {
       <section className="section-2">
         <div className="section-2__container container">
           <div className="section-2__img">
-            <Image layout='responsive' priority width={500} height={300} src={IMAGES.support2} alt="Support image" />
+            <Image style={{ height: 'auto', width: '100%' }} priority width={500} height={300} src={IMAGES.support2} alt="Support image" />
           </div>
           <div className="section-2__text">
             <h2>Cost Efficient Service</h2>

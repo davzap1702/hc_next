@@ -39,7 +39,6 @@ export const Header = () => {
       <div className="header__wrapper">
         <Link href={'/'} className="header__logo">
           <Image
-            layout='responsive'
             priority
             width={300}
             height={63}

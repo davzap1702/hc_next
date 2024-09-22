@@ -18,3 +18,10 @@ export const IMAGES = {
   barry: 'https://ik.imagekit.io/roiotve1b/huecker/tr:q-50/Barry.jpeg?',
   eric: 'https://ik.imagekit.io/roiotve1b/huecker/tr:q-50/Eric.jpeg?',
 };
+
+export const alerts = {
+  name: 'This field is required',
+  email: 'Please enter a valid email address.',
+  message: 'Your message must be at least 30 character long.',
+};
+
