@@ -1131,6 +1131,38 @@ h3.four-up--title {
   opacity: 1;
 }
 
+.blog-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+@media (max-width: 600px) {
+  .blog-breadcrumb {
+    gap: 0.2rem;
+  }
+}
+.blog-breadcrumb a {
+  color: var(--primary-color);
+  font-size: 2rem;
+  transition: 0.4s;
+  opacity: 0.5;
+  border-radius: 50%;
+  padding: 1rem;
+  height: 4rem;
+  width: 4rem;
+}
+@media (max-width: 600px) {
+  .blog-breadcrumb a {
+    font-size: 1.6rem;
+  }
+}
+.blog-breadcrumb a:hover {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  background-color: #e6e6e6;
+  color: var(--secondary-color);
+  opacity: 1;
+}
+
 header {
   padding-bottom: 1.4rem;
   position: fixed;
@@ -1998,7 +2030,8 @@ h1.services-title {
   font-weight: 500;
 }
 
-h5, h6 {
+h5,
+h6 {
   margin: 0.5rem auto;
 }
 
