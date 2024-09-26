@@ -131,8 +131,8 @@ export const ContactForm = () => {
   };
 
   return (
-    <section style={{ marginBottom: '2rem' }}>
-      <form className="contact-form" action="">
+    <section className='container' style={{ marginBottom: '2rem' }}>
+      <form className="contact-form " action="">
         <TextField
           autoComplete="name"
           required

@@ -1098,6 +1098,12 @@ h3.four-up--title {
 .share-component--item:hover {
   background-color: rgba(240, 239, 239, 0.8039215686);
 }
+.share-component button {
+  position: relative;
+}
+.share-component button span.ant-tooltip-open {
+  right: -9000px !important;
+}
 
 .blog-breadcrumb {
   display: flex;
