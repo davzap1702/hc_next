@@ -2,35 +2,27 @@
 import useArticle from '@/hooks/useArticle';
 
 import { useRelatedArticles } from '@/hooks/useRelatedArticles';
-import { articlesEndpoints } from '@/lib/routes';
-import { IArticleResponse } from '@/interfaces/latest';
+import { getArticleById } from '@/lib/requests';
 import { UseComponent } from '@/hooks/pageHooks/useComponents';
 import { AuthorByline } from '@/components/blog/AuthorByline';
-import { getArticles } from '@/lib/requests';
-import { Breadcrumb } from '@/components/blog/Breadcrumb';
 import { formatDate } from '@/helpers';
-import { notFound } from 'next/navigation';
+import { Breadcrumb } from '@/components/blog/Breadcrumb';
 import { Metadata } from 'next';
+import { notFound } from 'next/navigation';
 import { ThreeUp } from '@/components/blog/ThreeUp';
-import { Eyebrow } from '@/components/blog/Eyebrow';
 import { Share } from '@/components';
+import { Eyebrow } from '@/components/blog/Eyebrow';
+
 
 interface Props {
     params: {
-        slug: string
+        id: string
     }
 }
 
-export async function generateStaticParams(){
-  const { data }: IArticleResponse = await fetch(articlesEndpoints())
-    .then(res => res.json())
-    .catch(notFound);
 
-  return data.map(({ attributes: { slug } }) => ({ slug }));
-}
-
-export async function generateMetadata({ params: { slug } }: Props): Promise<Metadata>{
-  const { data } = await getArticles(slug);
+export async function generateMetadata({ params: { id } }: Props): Promise<Metadata>{
+  const { data } = await getArticleById(id);
   if (!data) return notFound();
 
   return {
@@ -42,8 +34,8 @@ export async function generateMetadata({ params: { slug } }: Props): Promise<Met
   };
 }
 
-export default async function Page({ params: { slug } }: Props) {
-  const data = await useArticle(slug);
+export default async function Page({ params: { id } }: Props) {
+  const data = await useArticle(id);
   const relatedArticleProps = await useRelatedArticles(data?.eyebrow);
 
   return (

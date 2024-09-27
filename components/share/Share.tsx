@@ -1,8 +1,9 @@
 'use client';
 import Link from 'next/link';
-import React, { useEffect, useState } from 'react';
+
 import { FaLink, FaLinkedin, FaSquareFacebook, FaSquareXTwitter } from 'react-icons/fa6';
-import Swal from 'sweetalert2';
+import { useEffect, useState } from 'react';
+import { Tooltip } from 'antd';
 
 interface Props {
   heading: string;
@@ -10,45 +11,34 @@ interface Props {
 
 export const Share = ({ heading }: Props) => {
   const [location, setLocation] = useState('');
+  const [openToolip, setOpenToolip] = useState(false);
+
   const shareOn = {
     facebook: `https://www.facebook.com/sharer/sharer.php?u=${location}`,
     linkedin: `https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(location)}&title=${encodeURIComponent(heading)}`,
     twitter: `https://twitter.com/intent/tweet?url=${encodeURIComponent(location)}&text=${encodeURIComponent(heading)}`,
   };
 
-  const Toast = Swal.mixin({
-    toast: true,
-    position: 'bottom',
-    showConfirmButton: false,
-    timer: 1500,
-    timerProgressBar: true,
-    didOpen: (toast) => {
-      toast.onmouseenter = Swal.stopTimer;
-      toast.onmouseleave = Swal.resumeTimer;
-    }
-  });
-
   const copyToClipboard = async () => {
     try {
       await navigator.clipboard.writeText(location);
-      Toast.fire({
-        icon: 'success',
-        title: 'Copied to the clipboard'
-      });
+      setOpenToolip(true);
+      setTimeout(() => {
+        setOpenToolip(false);
+      }, 2000);
+
     } catch (err) {
-      Toast.fire({
-        icon: 'error',
-        title: 'Failed to copy to the clipboard'
-      });
     }
   };
+
+
 
   useEffect(() => {
     setLocation(window.location.href);
   }, []);
 
   return (
-    <>
+    <div>
       <article className='share-component'>
         <Link className='share-component--item' target='_blank' href={shareOn.twitter}>
           <FaSquareXTwitter color='#202124' />
@@ -62,9 +52,11 @@ export const Share = ({ heading }: Props) => {
         <button onClick={() => {
           copyToClipboard();
         }} className='share-component--item'>
+          <Tooltip title="Link copied" open={openToolip} />
           <FaLink color='#000' />
         </button>
+
       </article>
-    </>
+    </div>
   );
 };

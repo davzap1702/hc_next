@@ -19,7 +19,7 @@ export default function Services() {
           <div className="services__section">
             <div className="services__section--img">
               <Image
-                layout='responsive'
+                style={{ height: 'auto', width: '100%' }}
                 priority
                 width={500}
                 height={410}
@@ -43,7 +43,13 @@ export default function Services() {
           <hr />
           <div className="services__section" id="software-implementation">
             <div className="services__section--img">
-              <Image layout='responsive' width={500} height={410} src={IMAGES.software} alt="" aria-label="hidden" />
+              <Image
+                style={{ height: 'auto', width: '100%' }}
+                width={500} height={410}
+                src={IMAGES.software}
+                alt=""
+                aria-label="hidden"
+              />
             </div>
             <div className="services__section--info">
               <h2>Software Implementation</h2>
@@ -60,7 +66,14 @@ export default function Services() {
           <hr />
           <div className="services__section" id="experiential">
             <div className="services__section--img">
-              <Image layout='responsive' width={500} height={410} src={IMAGES.inHouse} alt="" aria-label="hidden" />
+              <Image
+                style={{ height: 'auto', width: '100%' }}
+                width={500}
+                height={410}
+                src={IMAGES.inHouse}
+                alt=""
+                aria-label="hidden"
+              />
             </div>
             <div className="services__section--info">
               <h2>Experiential Training</h2>
@@ -78,7 +91,14 @@ export default function Services() {
           <hr />
           <div className="services__section" id="custom-development">
             <div className="services__section--img">
-              <Image layout='responsive' width={500} height={410} src={IMAGES.custom} alt="" aria-label="hidden" />
+              <Image
+                style={{ height: 'auto', width: '100%' }}
+                width={500}
+                height={410}
+                src={IMAGES.custom}
+                alt=""
+                aria-label="hidden"
+              />
             </div>
             <div className="services__section--info">
               <h2>Custom Development</h2>

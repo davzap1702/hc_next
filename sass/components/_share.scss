@@ -25,4 +25,10 @@
       background-color: #f0efefab;
     }
   }
+  button {
+    position: relative;
+    span.ant-tooltip-open {
+      right: -9000px !important;
+    }
+  }
 }
